@@ -1,40 +1,34 @@
 {
-  "name": "awesome-mac",
-  "version": "1.4.0",
-  "description": " This repo is a collection of awesome Mac applications and tools for developers and designers. ",
-  "homepage": "https://jaywcjlove.github.io/awesome-mac",
-  "main": "dist/awesome-mac.json",
+  "name": "amac",
+  "version": "1.0.0",
+  "private": true,
+  "author": "kenny wong <wowohoo@qq.com>",
+  "license": "MIT",
   "scripts": {
-    "start": "npm run build && npm run create:ast",
-    "doc": "idoc --watch",
-    "build": "idoc",
-    "create:ast": "node build/ast.mjs"
+    "start": "node node_modules/react-native-macos/local-cli/cli.js start",
+    "macos": "react-native-macos run-macos",
+    "test": "jest"
   },
+  "homepage": "https://github.com/jaywcjlove/amac.git",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaywcjlove/awesome-mac.git"
+    "url": "https://github.com/jaywcjlove/amac.git"
   },
-  "keywords": [
-    "awesome",
-    "awesome-mac",
-    "mac",
-    "macosx",
-    "osx"
-  ],
-  "files": [
-    "dist/awesome-mac.json",
-    "dist/awesome-mac.zh.json"
-  ],
-  "author": "kenny wang <wowohoo@qq.com>",
-  "license": "CC-BY-SA-4.0",
-  "bugs": {
-    "url": "https://github.com/jaywcjlove/awesome-mac/issues"
+  "dependencies": {
+    "@rematch/core": "1.0.2",
+    "babel-plugin-module-resolver": "3.1.1",
+    "react": "16.2.0",
+    "react-native-macos": "0.18.1",
+    "react-redux": "5.0.7",
+    "react-router-native": "4.3.0"
   },
   "devDependencies": {
-    "fs-extra": "^10.1.0",
-    "idoc": "^1.18.0",
-    "remark": "^14.0.2",
-    "remark-gfm": "^3.0.1",
-    "to-vfile": "^7.2.3"
+    "babel-jest": "23.6.0",
+    "babel-preset-react-native": "4.0.1",
+    "jest": "23.6.0",
+    "react-test-renderer": "16.2.0"
+  },
+  "jest": {
+    "preset": "react-native-macos"
   }
 }
